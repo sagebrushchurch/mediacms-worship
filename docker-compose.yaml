@@ -15,7 +15,7 @@ services:
       ADMIN_EMAIL: 'techsupport@sagebrush.church'
       ADMIN_PASSWORD: ''
     command: "./deploy/docker/prestart.sh"
-    restart: unless-stopped
+    restart: on-failure
     depends_on:
       redis:
         condition: service_healthy
