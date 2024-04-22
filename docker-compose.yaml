@@ -12,7 +12,7 @@ services:
       ENABLE_CELERY_LONG: 'no'
       ENABLE_CELERY_BEAT: 'no'
       ADMIN_USER: 'admin'
-      ADMIN_EMAIL: 'admin@localhost'
+      ADMIN_EMAIL: 'techsupport@sagebrush.church'
       #ADMIN_PASSWORD: 'uncomment_and_set_password_here'
     command: "./deploy/docker/prestart.sh"
     restart: on-failure
@@ -26,7 +26,7 @@ services:
     deploy:
       replicas: 1
     ports:
-      - "80:80"
+      - "3109:80"
     volumes:
       - /media/media1/worship:/home/mediacms.io/mediacms/
     environment:
